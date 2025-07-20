@@ -1,0 +1,89 @@
+{
+  "wedding": {
+    "id": 0,
+    "date": "2025-12-07T15:00:00",
+    "location": {
+      "lat": 37.28163212324522,
+      "lng": 127.0303329958705,
+      "name": "여의도 웨딩컨벤션",
+      "address": "서울 영등포구 여의대로 14 KT\n",
+      "link": "https://map.kakao.com/?nil_profile=title&nil_src=local",
+      "waytocome": {
+        "metro": [
+          "여의도역 1번 출구 하차, 도보 약 7분 (520m)",
+          "국회의사당역 3번 출구 하차, 도보 약 2분 (9호선)",
+          "여의도역 5번 출구 하차, 도보 약 8~10분 (5·9호선)",
+          "용산역(1호선) → 신길역 환승 → 여의도역 하차 (총 약 15분)"
+        ],
+        "bus": [
+          "여의도순복음교회 정류장 하차, 162, 260, 362, 461, 753, 5615, 5618, 6623 (도보 약 3~5분)",
+          "서울역 버스환승센터 → 162, 463번 → 여의도순복음교회 정류장 하차 (약 25분)",
+          "잠실역(잠실광역환승센터) → 261번 → 여의도순복음교회 정류장 하차 (약 35분)",
+          "여의도역 5번 출구 → 7611, 261번 → 한국경제인협회 정류장 하차 (약 13분)"
+        ]
+      }
+    },
+    "groom": {
+      "name": "김동균",
+      "account": {
+        "bankName": "신한",
+        "accountNumber": "110-356-123433",
+        "kakaopayLink": "https://qr.kakaopay.com/Ej8HNpNJZ"
+      },
+      "phoneNumber": "01045532323",
+      "parents": [
+        {
+          "name": "규니마마",
+          "account": {
+            "bankName": "농협",
+            "accountNumber": "352-1252-4559-90"
+          },
+          "phoneNumber": "01074793429"
+        }
+      ]
+    },
+    "bride": {
+      "name": "이지수",
+      "account": {
+        "bankName": "농협",
+        "accountNumber": "601103-56-059489",
+        "kakaoPayLink": "https://qr.kakaopay.com/Ej7oyDkAK"
+      },
+      "phoneNumber": "01074793429",
+      "parents": [
+        {
+          "name": "지수파파",
+          "account": {
+            "bankName": "카카오뱅크",
+            "accountNumber": "601103-56-059489"
+          },
+          "phoneNumber": "01012341234"
+        },
+        {
+          "name": "지수마마",
+          "account": {
+            "bankName": "농협",
+            "accountNumber": "601103-56-059489"
+          },
+          "phoneNumber": "01058384884"
+        }
+      ]
+    },
+    "message": {
+      "intro": "가장 진실된 것으로\n가장 당신을 위한 생각으로\n나의 마음을 가득 채워가고 싶다\n참 작은 마음이지만\n당신을 위한 것 중 가장 작은 것일지라도\n당신이 허락해준다면\n나 내 온 마음 그것이라 하겠다.\n\n이경선, <마음>",
+      "invitation": "소중한 분들을 초대합니다\n살랑이는 바람결에\n사랑이 묻어나는 계절입니다.\n여기 곱고 예쁜 두 사람이 사랑을 맺어\n인생의 반려자가 되려 합니다.\n새 인생을 시작하는 이 자리에 오셔서\n축복해 주시면 감사하겠습니다."
+    },
+    "galleryImages": [
+      "/assets/images/wedding_01.jpeg",
+      "/assets/images/wedding_02.jpeg",
+      "/assets/images/wedding_03.jpeg",
+      "/assets/images/wedding_04.jpeg",
+      "/assets/images/wedding_05.jpeg",
+      "/assets/images/wedding_06.jpeg",
+      "/assets/images/wedding_07.jpeg",
+      "/assets/images/wedding_08.jpeg",
+      "/assets/images/wedding_09.jpeg"
+    ],
+    "attendCount": 2
+  }
+}
