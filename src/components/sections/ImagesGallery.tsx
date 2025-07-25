@@ -28,7 +28,11 @@ function ImagesGallery({images} : {images:string[]}){
                     <li key={idx} className={cx('wrap-image')} onClick={()=>{
                         handleSelectedImage(idx)
                     }}>
-                        <img src={src} alt='웨딩 이미지'/>
+                        <picture>
+                            <source srcSet={`${src}.webp`} type="image/webp" />
+                            <img src={`${src}.jpeg`} alt='웨딩 이미지'/>
+                        </picture>
+                        
                     </li>
                 ))}
             </ul>
