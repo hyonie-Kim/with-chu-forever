@@ -44,19 +44,43 @@ function Map({location}: {location: Location}){
             <div className={cx('wrap-header')}>
                 <span className={cx('txt-title')}>오시는 길</span>
                 <span className={cx('txt-subtitle')}>{location.name}</span>
-                <span>{location.address}</span>
-                
+                <span className={cx('txt-address')}>{location.address}</span>
             </div>
         )}>
             <div className={cx('wrap-map')}>
                 <div className={cx('map')} ref={mapContainer}></div>
-                <a className={cx('btn-find-way')} href={location.link} target='_blank' rel='noreferrer' >길찿기</a>
+                <div className={cx('map-overlay')}>
+                    <a className={cx('btn-find-way')} href={location.link} target='_blank' rel='noreferrer'>
+                        <span className={cx('btn-icon')}>🗺️</span>
+                        길찾기
+                    </a>
+                </div>
             </div>
 
-            <div>
-                <WayToCome label="버스" list={location.waytocome.bus} />
-                <WayToCome label="지하철" list={location.waytocome.metro} />
-
+            <div className={cx('wrap-transport')}>
+                <div className={cx('transport-section')}>
+                    <WayToCome 
+                        label={
+                            <div className={cx('transport-label')}>
+                                <span className={cx('transport-icon')}>🚌</span>
+                                <span>버스 이용시</span>
+                            </div>
+                        } 
+                        list={location.waytocome.bus} 
+                    />
+                </div>
+                
+                <div className={cx('transport-section')}>
+                    <WayToCome 
+                        label={
+                            <div className={cx('transport-label')}>
+                                <span className={cx('transport-icon')}>🚉</span>
+                                <span>지하철 이용시</span>
+                            </div>
+                        } 
+                        list={location.waytocome.metro} 
+                    />
+                </div>
             </div>
         </Section>
         )

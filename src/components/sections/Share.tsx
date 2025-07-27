@@ -68,7 +68,7 @@ function Share({groomName, brideName,date}:ShareProps){
         <Section title='공유하기'>
             <div className={cx('wrap-share')}>
                 <button onClick={handleSgareKakao}>
-                    <IconKakao/>
+                    <IconKakao/> 카카오톡 공유
                 </button>
                 <CopyToClipboardComponent text={window.location.origin} 
                 onCopy={()=>{
@@ -76,7 +76,7 @@ function Share({groomName, brideName,date}:ShareProps){
                 }}
                 >
                 <button >
-                    <IconClipboard/>
+                    <IconClipboard/> 링크 복사하기
                 </button>
                 </CopyToClipboardComponent>
             </div>
