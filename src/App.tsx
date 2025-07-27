@@ -26,9 +26,18 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
     // 1. 웨딩 데이터 호출
+  
     useEffect(()=>{
       setLoading(true);
-      fetch('https://with-chu-forever-1.onrender.com/wedding').then((res)=>{
+      const apiUrl = import.meta.env.MODE === 'development' 
+        ? 'http://localhost:8888/wedding'
+        : 'https://with-chu-forever-1.onrender.com/wedding';
+      
+      console.log('현재 환경:', import.meta.env.MODE);
+      console.log('API URL:', apiUrl);
+      
+      fetch(apiUrl).then((res)=>{
+      
         if(res.ok === false){
           throw new Error('청첩장 정보를 불러오지 못했습니다.');
         }
