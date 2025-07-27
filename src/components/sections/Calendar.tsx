@@ -37,7 +37,7 @@ function Calendar({date}:{date:string}){
                         month={weddingDate} 
                         selected={weddingDate} 
                         formatters={{formatCaption: () => ''}}
-                        onDayClick={(day) => {
+                        onDayClick={() => {
                             // 클릭해도 선택된 날짜를 변경하지 않음
                             return;
                         }}
