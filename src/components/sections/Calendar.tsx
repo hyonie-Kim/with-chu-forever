@@ -9,24 +9,7 @@ import styles from './Calender.module.scss'
 
 const cx = classNames.bind(styles)
 
-const css =`
-     .rdp-nav{
-    display:none;
-    }
-    .rdp-day{
-    cursor: default;
-    }
-    .rdp-weekday{
-        font-weight: bold;
-        font-size:14px;
-    }
-    .rdp-selected .rdp-day_button{
-    background-color:var(--red);
-    border: none;
-    ont-weight: bold;
-    color: #fff;
-    }
-`
+
 
 function Calendar({date}:{date:string}){
     const weddingDate = parseISO(date)
@@ -42,8 +25,28 @@ function Calendar({date}:{date:string}){
             
 
             <div className={cx('wrap-calender')}>
-                <style>{css}</style>
-                <DayPicker mode={'multiple'} locale={ko} month={weddingDate} required selected={[weddingDate]} formatters={{formatCaption: () => ''}}/>
+                <div 
+                    style={{ 
+                        pointerEvents: 'none',
+                        userSelect: 'none'
+                    }}
+                >
+                    <DayPicker 
+                        mode={'single'} 
+                        locale={ko} 
+                        month={weddingDate} 
+                        selected={weddingDate} 
+                        formatters={{formatCaption: () => ''}}
+                        onDayClick={(day) => {
+                            // 클릭해도 선택된 날짜를 변경하지 않음
+                            return;
+                        }}
+                        onSelect={() => {
+                            // 선택 이벤트도 무시
+                            return;
+                        }}
+                    />
+                </div>
             </div>
         </Section>
     )

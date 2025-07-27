@@ -20,4 +20,81 @@
 .wrap-calender{
     display: flex;
     justify-content: center;
+    pointer-events: none;
+    
+    * {
+        pointer-events: none !important;
+        user-select: none !important;
+    }
+}
+
+// DayPicker 커스텀 스타일
+:global(.rdp-nav){
+    display:none;
+}
+
+:global(.rdp-day){
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+:global(.rdp-day_button){
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+:global(.rdp-weekday){
+    font-weight: bold;
+    font-size:14px;
+}
+
+:global(.rdp-selected .rdp-day_button){
+    background-color: var(--red);
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+:global(.rdp-selected .rdp-day_button::after){
+    content: "D-Day ♥";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-size: 8px;
+    color: var(--red);
+    background: white;
+    border-radius: 8px;
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--red);
+    font-weight: bold;
+}
+
+:global(.rdp-day:hover){
+    background-color: transparent !important;
+}
+
+:global(.rdp-day_button:hover){
+    background-color: transparent !important;
+}
+
+:global(.rdp-day:not(.rdp-selected) .rdp-day_button:hover){
+    background-color: transparent !important;
+}
+
+:global(.rdp-day:not(.rdp-selected) .rdp-day_button:focus){
+    background-color: transparent !important;
+}
+
+:global(.rdp-day_button:active){
+    background-color: transparent !important;
+}
+
+:global(.rdp-day_button:focus){
+    background-color: transparent !important;
+    outline: none !important;
 }
