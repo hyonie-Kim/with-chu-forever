@@ -35,11 +35,13 @@ function ImageViewer({
                         return  (
                         <SwiperSlide key={idx}>
                             <picture>
-                                <source srcSet={generateImageUrl({filename:src, format: 'webp'})} type="image/webp" />
+                                <source srcSet={generateImageUrl({
+                                    filename:src, 
+                                    format: 'webp'})} 
+                                    type="image/webp" />
                                 <img src={generateImageUrl({
                                     filename:src,
                                     format:'jpeg'
-                                   
                                 })} alt='웨딩 이미지'/>
                             </picture>
                         </SwiperSlide>)})
