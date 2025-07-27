@@ -1,10 +1,12 @@
 import classNames from 'classnames/bind'
+import { useState } from 'react';
 
 import Section from '../shared/Section'
 import styles from './ImagesGellery.module.scss'
 
 import ImageViewer from '../ImageViewer';
-import { useState } from 'react';
+
+import generateImageUrl from '@/utils/generateImageUrl';
 
 const cx = classNames.bind(styles)
 
@@ -29,8 +31,13 @@ function ImagesGallery({images} : {images:string[]}){
                         handleSelectedImage(idx)
                     }}>
                         <picture>
-                            <source srcSet={`${src}.webp`} type="image/webp" />
-                            <img src={`${src}.jpeg`} alt='웨딩 이미지'/>
+                            <source srcSet={generateImageUrl({filename:src, format: 'webp', option: 'w_240,h_240,q_auto,c_fill'})} type="image/webp" />
+                            <img src={generateImageUrl({
+                                filename:src,
+                                format:'jpeg',
+                                option: 'w_240,h_240,q_auto,c_fill'
+                            })} alt='웨딩 이미지'/>
+                            {/* <img src={`${src}.jpeg`} alt='웨딩 이미지'/> */}
                         </picture>
                         
                     </li>
