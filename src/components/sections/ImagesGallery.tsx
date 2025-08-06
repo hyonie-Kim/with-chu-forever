@@ -32,7 +32,6 @@ function ImagesGallery({images} : {images:string[]}){
             <ul className={cx('wrap-images')}>
                 {images.map((src, idx)=>(
                     <li key={idx} className={cx('wrap-image')} onClick={()=>{ handleSelectedImage(idx)}}>
-                         <img src={`${src}.webp`} alt='웨딩 이미지'/> 
                         {/* <picture>
                              <source srcSet={generateImageUrl({
                                 filename:src, 
@@ -46,6 +45,12 @@ function ImagesGallery({images} : {images:string[]}){
                             })} alt='웨딩 이미지'/>
                            
                         </picture> */}
+                        <picture>
+                             <source srcSet={`${src}.webp`}
+                                type="image/webp" /> 
+                            <img src={`${src}.jpeg`} alt='웨딩 이미지'/>
+                           
+                        </picture>
                         
                     </li>
                 ))}

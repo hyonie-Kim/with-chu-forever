@@ -43,9 +43,6 @@ function ImageViewer({
                                             <Swiper
                 key={`swiper-${selectedIdx}`}
                 onSwiper={(swiper)=>{
-                console.log('onSwiper - selectedIdx:', selectedIdx)
-                console.log('onSwiper - 선택된 이미지:', images[selectedIdx])
-                console.log('onSwiper - 전체 이미지 배열:', images)
                 swiperRef.current = swiper;
                 }}
                 slidesPerView={1} 
@@ -57,7 +54,13 @@ function ImageViewer({
                                         {images.map((src, idx)=>{ 
                             return  (
                             <SwiperSlide key={idx}>
-                                <img 
+                                 <picture>
+                                    <source srcSet={`${src}.webp`}
+                                        type="image/webp" /> 
+                                    <img src={`${src}.jpeg`} alt='웨딩 이미지'/>
+                                
+                                </picture>
+                                {/* <img 
                                     src={`${src}.jpeg`} 
                                     alt={`웨딩 이미지 ${idx}`} 
                                     onLoad={() => console.log(`이미지 로드 성공: ${src}.webp (인덱스: ${idx})`)}
@@ -69,7 +72,7 @@ function ImageViewer({
                                         display: 'block'
                                     }}
                                     data-index={idx}
-                                />
+                                /> */}
                             </SwiperSlide>)})
                     }
                    
