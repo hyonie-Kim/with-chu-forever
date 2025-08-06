@@ -10,12 +10,25 @@ interface FullScreenMessageProps{
 function FullScreenMessage({type}:FullScreenMessageProps){
     return (
         <div className={cx('container')}>
-            {type === 'loading' ? (<Heart/>) 
-            :(<>
-            <Error/>
-            에러가 발생했어요 잠시후 다시 시도해주세요
-            </>)
-            }
+            {type === 'loading' ? (
+                <>
+                    <Heart/>
+                    <div className={cx('loading-text')}>
+                        청첩장을 불러오는 중입니다...
+                        <br/>
+                        <small>잠시만 기다려주세요 (최대 30초)</small>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <Error/>
+                    <div className={cx('error-text')}>
+                        서버 연결에 실패했습니다
+                        <br/>
+                        <small>잠시 후 다시 시도해주세요</small>
+                    </div>
+                </>
+            )}
         </div>
     )
 }

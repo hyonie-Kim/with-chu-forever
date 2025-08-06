@@ -21,7 +21,44 @@
 
     // 무한반복
     animation: heart 1.2s infinite linear;
+}
 
+.loading-text {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 500;
+    
+    small {
+        color: #666;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 8px;
+        display: block;
+    }
+}
+
+.error-text {
+    margin-top: 20px;
+    text-align: center;
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: 500;
+    
+    small {
+        color: #666;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 8px;
+        display: block;
+    }
+}
+
+.ico-error {
+    color: #e74c3c;
+    width: 60px;
+    height: 60px;
 }
 
 @keyframes heart{
@@ -43,5 +80,4 @@
     100% {
         transform: scale(0.9);
     }
-
 }
